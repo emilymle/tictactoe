@@ -1,0 +1,17 @@
+.square {
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  vertical-align: top;
+  float:left;
+  margin-right: 1%;
+  background-color: orange;
+  font-size: 100px;
+  text-align: center;
+  }
+.container{
+  height: 100px;
+  width: 350px;
+  padding: 25%;
+  /*image-orientation;*/
+}
