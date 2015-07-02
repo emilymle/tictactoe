@@ -12,20 +12,38 @@ var square9 = allSquares[8];
 
 var playerCount = 0;
 
-function moveX(){
-  this.innerText = "X";
+function moveX(element, playerCount){
+  element.innerText = "X";
 }
 
-function moveO(){
-  this.innerText = "O";
+function moveO(element){
+  element.innerText = "O";
 }
+
+var reset = function(){
+  console.log('reset button clicked');
+  playerCount = 0;
+  for(var i = 0; i < allSquares.length; i++){
+    var square = allSquares[i];
+    square.innerText = "";
+  }
+};
 
 for(var i = 0; i < 9; i++){
-  if (playerCount % 2 === 0){
+  allSquares[i].addEventListener('click', function(){
+    //console.log(this);
+    if(playerCount % 2 === 0){
+      moveX(this);
+    }else{
+      moveO(this);
+    }
+    playerCount = playerCount + 1;
+  });
+  /*if (playerCount % 2 === 0){
     allSquares[i].addEventListener('click', moveX);
   } else {
     allSquares[i].addEventListener('click', moveO);
-  }
-  playerCount = playerCount + 1;
+  }*/
+
   // console.log(playerCount);
 }

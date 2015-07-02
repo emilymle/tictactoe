@@ -12,6 +12,7 @@
 .container{
   height: 100px;
   width: 350px;
-  padding: 25%;
+  margin: auto;
+  padding: 25% 0;
   /*image-orientation;*/
 }
